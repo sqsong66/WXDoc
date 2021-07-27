@@ -1,0 +1,738 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.0">
+    
+    
+      
+        <title>Jetpack MVVM - WXDoc(Android)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.fe914879.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="orange">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="WXDoc(Android)" class="md-header__button md-logo" aria-label="WXDoc(Android)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WXDoc(Android)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Jetpack MVVM
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="orange"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/sqsong66/WXDoc.git" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Github
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="WXDoc(Android)" class="md-nav__button md-logo" aria-label="WXDoc(Android)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    WXDoc(Android)
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/sqsong66/WXDoc.git" title="前往 GitHub 仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Github
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        傲软抠图
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../global/" class="md-nav__link">
+        全局配置
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        User Guide
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="User Guide" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          User Guide
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Google%20Play%E8%AE%A2%E9%98%85%E6%8E%A5%E5%85%A5%E6%96%87%E6%A1%A3/" class="md-nav__link">
+        Google Pay
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Jetpack MVVM
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Jetpack MVVM
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基础信息封装
+  </a>
+  
+    <nav class="md-nav" aria-label="基础信息封装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1baseapplication" class="md-nav__link">
+    1、BaseApplication封装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2、全局实例使封装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3、基类封装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    界面示例
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    概述
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    基础信息封装
+  </a>
+  
+    <nav class="md-nav" aria-label="基础信息封装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1baseapplication" class="md-nav__link">
+    1、BaseApplication封装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    2、全局实例使封装
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    3、基类封装
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    界面示例
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Jetpack MVVM</h1>
+                
+                <h2 id="_1">概述</h2>
+<p>整体框架采用<code>Kotlin+Hilt+Retrofit+OkHttp+Coroutines</code>。采用<code>Hilt</code>来进行对象的依赖注入，<code>OkHttp</code>、<code>Retrofit</code>进行网络请求，<code>Coroutines</code>进行异步操作(网络请求、数据库处理、密集计算等)。</p>
+<h2 id="_2">基础信息封装</h2>
+<h3 id="1baseapplication">1、<code>BaseApplication</code>封装</h3>
+<p><code>BaseApplication</code>需要使用<code>@HiltAndroidApp</code>注解，方便后续<code>Hilt</code>对相应的对象进行依赖管理。
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nd">@HiltAndroidApp</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="kd">class</span> <span class="nc">BaseApplication</span><span class="p">:</span> <span class="n">Application</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">override</span> <span class="kd">fun</span> <span class="nf">onCreate</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 4 "></span>        <span class="k">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="n">instance</span> <span class="o">=</span> <span class="k">this</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="kd">companion</span> <span class="kd">object</span> <span class="err">{</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="kd">private</span> <span class="kd">lateinit</span> <span class="kd">var</span> <span class="nv">instance</span><span class="p">:</span> <span class="n">BaseApplication</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="kd">fun</span> <span class="nf">getInstance</span><span class="p">():</span> <span class="n">BaseApplication</span> <span class="o">=</span> <span class="n">instance</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span><span class="p">}</span>
+</code></pre></div></p>
+<h3 id="2">2、全局实例使封装</h3>
+<p>网络请求实例<code>ApiService</code>对象创建。使用<code>Hilt</code>来提供对象的类需要使用<code>@Module</code>注解，同时，使用<code>@InstallIn</code>注解来标识该类所具有的生命周期。网络请求属于全局类型，可以使用<code>Hilt</code>提供的<code>SingletonComponent</code>来表示其全局单例属性。\
+所有提供对象的方法需要使用<code>@Provides</code>注解， \
+<code>@Singleton</code>注解标识该方法提供的实例为单例对象。
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nd">@Module</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="nd">@InstallIn</span><span class="p">(</span><span class="n">SingletonComponent</span><span class="o">::</span><span class="n">class</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="kd">object</span> <span class="nc">CommonModule</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="p">...</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nd">@Singleton</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nd">@Provides</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="kd">fun</span> <span class="nf">provideApiService</span><span class="p">():</span> <span class="n">ApiService</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 8 "></span>        <span class="k">return</span> <span class="n">Retrofit</span><span class="p">.</span><span class="na">Builder</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 9 "></span>            <span class="p">.</span><span class="na">client</span><span class="p">(</span><span class="n">OkHttpClientFactory</span><span class="p">.</span><span class="na">createUnsafeOkHttpClient</span><span class="p">())</span>
+<span class="linenos" data-linenos="10 "></span>            <span class="p">.</span><span class="na">addConverterFactory</span><span class="p">(</span><span class="n">GsonConverterFactory</span><span class="p">.</span><span class="na">create</span><span class="p">())</span>
+<span class="linenos" data-linenos="11 "></span>            <span class="p">.</span><span class="na">baseUrl</span><span class="p">(</span><span class="n">ApiService</span><span class="p">.</span><span class="na">BASE_URL</span><span class="p">)</span>
+<span class="linenos" data-linenos="12 "></span>            <span class="p">.</span><span class="na">build</span><span class="p">()</span>
+<span class="linenos" data-linenos="13 "></span>            <span class="p">.</span><span class="na">create</span><span class="p">(</span><span class="n">ApiService</span><span class="o">::</span><span class="n">class</span><span class="p">.</span><span class="na">java</span><span class="p">)</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="p">...</span>
+<span class="linenos" data-linenos="16 "></span><span class="p">}</span>
+</code></pre></div>
+<code>ApiService</code>中的接口函数使用<code>suspend</code>关键字修饰标识为挂起函数，方便后续在协程中调用。
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">interface</span> <span class="nc">ApiService</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="nd">@GET</span><span class="p">(</span><span class="s">&quot;article/list/{page}/json&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="kd">suspend</span> <span class="kd">fun</span> <span class="nf">getHomeArticles</span><span class="p">(</span><span class="nd">@Path</span><span class="p">(</span><span class="s">&quot;page&quot;</span><span class="p">)</span> <span class="n">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">):</span> <span class="n">BaseBean</span><span class="o">&lt;</span><span class="n">ArticleData</span><span class="o">&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nd">@GET</span><span class="p">(</span><span class="s">&quot;banner/json&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="kd">suspend</span> <span class="kd">fun</span> <span class="nf">getHomeBanner</span><span class="p">():</span> <span class="n">BaseBean</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">BannerData</span><span class="o">&gt;&gt;</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="kd">companion</span> <span class="kd">object</span> <span class="err">{</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="kd">const</span> <span class="kd">val</span> <span class="nv">BASE_URL</span> <span class="o">=</span> <span class="s">&quot;https://www.wanandroid.com/&quot;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="13 "></span><span class="p">}</span>
+</code></pre></div></p>
+<h3 id="3">3、基类封装</h3>
+<p><code>BaseActivity</code>:
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">BaseActivity</span><span class="o">&lt;</span><span class="n">V</span> <span class="p">:</span> <span class="n">ViewDataBinding</span><span class="o">&gt;</span> <span class="p">:</span> <span class="n">AppCompatActivity</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">protected</span> <span class="kd">lateinit</span> <span class="kd">var</span> <span class="nv">binding</span><span class="p">:</span> <span class="n">V</span>
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="c1">// init data binding.</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="kd">abstract</span> <span class="kd">fun</span> <span class="nf">initBinding</span><span class="p">():</span> <span class="n">V</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="c1">// init your something...</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="kd">abstract</span> <span class="kd">fun</span> <span class="nf">initEvent</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="n">Bundle?)</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span>    <span class="c1">// define the status bar text color(black or white).</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="kd">open</span> <span class="kd">fun</span> <span class="nf">isDarkStatusBarText</span><span class="p">():</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="kc">true</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span>    <span class="kd">open</span> <span class="kd">fun</span> <span class="nf">preInflateView</span><span class="p">()</span> <span class="p">{}</span>
+<span class="linenos" data-linenos="15 "></span>
+<span class="linenos" data-linenos="16 "></span>    <span class="kd">override</span> <span class="kd">fun</span> <span class="nf">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="n">Bundle?)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="17 "></span>        <span class="c1">// Set status bar text color.</span>
+<span class="linenos" data-linenos="18 "></span>        <span class="n">setStatusBarTextColor</span><span class="p">(</span><span class="n">isDarkStatusBarText</span><span class="p">())</span>
+<span class="linenos" data-linenos="19 "></span>        <span class="n">preInflateView</span><span class="p">()</span>
+<span class="linenos" data-linenos="20 "></span>        <span class="k">super</span><span class="p">.</span><span class="na">onCreate</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="n">binding</span> <span class="o">=</span> <span class="n">initBinding</span><span class="p">()</span>
+<span class="linenos" data-linenos="22 "></span>        <span class="n">setContentView</span><span class="p">(</span><span class="n">binding</span><span class="p">.</span><span class="na">root</span><span class="p">)</span>
+<span class="linenos" data-linenos="23 "></span>        <span class="n">initEvent</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">)</span>
+<span class="linenos" data-linenos="24 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="25 "></span>
+<span class="linenos" data-linenos="26 "></span>    <span class="kd">override</span> <span class="kd">fun</span> <span class="nf">onOptionsItemSelected</span><span class="p">(</span><span class="n">item</span><span class="p">:</span> <span class="n">MenuItem</span><span class="p">):</span> <span class="kt">Boolean</span> <span class="p">{</span>
+<span class="linenos" data-linenos="27 "></span>        <span class="k">if</span> <span class="p">(</span><span class="n">item</span><span class="p">.</span><span class="na">itemId</span> <span class="o">==</span> <span class="n">android</span><span class="p">.</span><span class="na">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">home</span><span class="p">)</span> <span class="n">finish</span><span class="p">()</span>
+<span class="linenos" data-linenos="28 "></span>        <span class="k">return</span> <span class="k">super</span><span class="p">.</span><span class="na">onOptionsItemSelected</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+<span class="linenos" data-linenos="29 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="30 "></span>
+<span class="linenos" data-linenos="31 "></span><span class="p">}</span>
+</code></pre></div>
+<code>BaseFragment</code>:
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">BaseFragment</span><span class="o">&lt;</span><span class="n">V</span><span class="p">:</span> <span class="n">ViewDataBinding</span><span class="o">&gt;</span><span class="p">:</span> <span class="n">Fragment</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="kd">protected</span> <span class="kd">lateinit</span> <span class="kd">var</span> <span class="nv">binding</span><span class="p">:</span> <span class="n">V</span>
+<span class="linenos" data-linenos=" 4 "></span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="c1">// init data binding.</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="kd">abstract</span> <span class="kd">fun</span> <span class="nf">initBinding</span><span class="p">(</span><span class="n">inflater</span><span class="p">:</span> <span class="n">LayoutInflater</span><span class="p">,</span> <span class="n">container</span><span class="p">:</span> <span class="n">ViewGroup?,</span> <span class="n">savedInstanceState</span><span class="p">:</span> <span class="n">Bundle?)</span><span class="p">:</span> <span class="n">V</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="c1">// init your something...</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="kd">abstract</span> <span class="kd">fun</span> <span class="nf">initEvent</span><span class="p">()</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span>    <span class="kd">override</span> <span class="kd">fun</span> <span class="nf">onCreateView</span><span class="p">(</span><span class="n">inflater</span><span class="p">:</span> <span class="n">LayoutInflater</span><span class="p">,</span> <span class="n">container</span><span class="p">:</span> <span class="n">ViewGroup?,</span> <span class="n">savedInstanceState</span><span class="p">:</span> <span class="n">Bundle?)</span><span class="p">:</span> <span class="n">View? </span><span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span>        <span class="n">binding</span> <span class="o">=</span> <span class="n">initBinding</span><span class="p">(</span><span class="n">inflater</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="n">savedInstanceState</span><span class="p">)</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="k">return</span> <span class="n">binding</span><span class="p">.</span><span class="na">root</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="15 "></span>
+<span class="linenos" data-linenos="16 "></span>    <span class="kd">override</span> <span class="kd">fun</span> <span class="nf">onViewCreated</span><span class="p">(</span><span class="n">view</span><span class="p">:</span> <span class="n">View</span><span class="p">,</span> <span class="n">savedInstanceState</span><span class="p">:</span> <span class="n">Bundle?)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="17 "></span>        <span class="k">super</span><span class="p">.</span><span class="na">onViewCreated</span><span class="p">(</span><span class="n">view</span><span class="p">,</span> <span class="n">savedInstanceState</span><span class="p">)</span>
+<span class="linenos" data-linenos="18 "></span>        <span class="n">initEvent</span><span class="p">()</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="20 "></span>
+<span class="linenos" data-linenos="21 "></span><span class="p">}</span>
+</code></pre></div></p>
+<h2 id="_3">界面示例</h2>
+<p>使用<code>Hilt</code>注解后，Android中的四大组件需要使用<code>@AndroidEntryPoint</code>注解，这样在四大组件中使用其他对象时也可以使用注解来进行对象的依赖注入。
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nd">@AndroidEntryPoint</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="kd">class</span> <span class="nc">MainActivity</span> <span class="p">:</span> <span class="n">BaseActivity</span><span class="o">&lt;</span><span class="n">ActivityMainBinding</span><span class="o">&gt;</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="kd">private</span> <span class="kd">val</span> <span class="nv">mainViewModel</span> <span class="k">by</span> <span class="n">viewModels</span><span class="o">&lt;</span><span class="n">MainViewModel</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="kd">override</span> <span class="kd">fun</span> <span class="nf">initBinding</span><span class="p">():</span> <span class="n">ActivityMainBinding</span> <span class="o">=</span> <span class="n">ActivityMainBinding</span><span class="p">.</span><span class="na">inflate</span><span class="p">(</span><span class="n">layoutInflater</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="kd">override</span> <span class="kd">fun</span> <span class="nf">initEvent</span><span class="p">(</span><span class="n">savedInstanceState</span><span class="p">:</span> <span class="n">Bundle?)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>        <span class="kd">val</span> <span class="nv">navController</span> <span class="o">=</span> <span class="n">findNavController</span><span class="p">(</span><span class="n">R</span><span class="p">.</span><span class="na">id</span><span class="p">.</span><span class="na">nav_host_fragment_activity_main</span><span class="p">)</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="n">binding</span><span class="p">.</span><span class="na">navView</span><span class="p">.</span><span class="na">setupWithNavController</span><span class="p">(</span><span class="n">navController</span><span class="p">)</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span>        <span class="c1">// 请求banner数据</span>
+<span class="linenos" data-linenos="13 "></span>        <span class="n">mainViewModel</span><span class="p">.</span><span class="na">requestBannerData</span><span class="p">()</span>
+<span class="linenos" data-linenos="14 "></span>
+<span class="linenos" data-linenos="15 "></span>        <span class="n">mainViewModel</span><span class="p">.</span><span class="na">bannerList</span><span class="p">.</span><span class="na">observe</span><span class="p">(</span><span class="k">this</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="16 "></span>            <span class="n">showToast</span><span class="p">(</span><span class="s">&quot;Banner size: </span><span class="si">${</span><span class="nb">it</span><span class="p">.</span><span class="na">size</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="17 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="19 "></span>
+<span class="linenos" data-linenos="20 "></span><span class="p">}</span>
+</code></pre></div>
+通过Kotlin扩展函数特性，在<code>Activity</code>中获取<code>ViewModel</code>对象便变得更加简单了。并且<code>ViewModel</code>的生命周期也与<code>Activity</code>进行了绑定。</p>
+<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="nd">@HiltViewModel</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="kd">class</span> <span class="nc">MainViewModel</span> <span class="nd">@Inject</span> <span class="k">constructor</span><span class="p">()</span> <span class="p">:</span> <span class="n">ViewModel</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="nd">@SuppressLint</span><span class="p">(</span><span class="s">&quot;StaticFieldLeak&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 5 "></span>    <span class="nd">@Inject</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="nd">@ApplicationContext</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="kd">lateinit</span> <span class="kd">var</span> <span class="nv">context</span><span class="p">:</span> <span class="n">Context</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="nd">@Inject</span>
+<span class="linenos" data-linenos="10 "></span>    <span class="kd">lateinit</span> <span class="kd">var</span> <span class="nv">apiService</span><span class="p">:</span> <span class="n">ApiService</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span>    <span class="kd">val</span> <span class="nv">bannerList</span> <span class="o">=</span> <span class="n">MutableLiveData</span><span class="o">&lt;</span><span class="n">List</span><span class="o">&lt;</span><span class="n">BannerData</span><span class="o">&gt;&gt;</span><span class="p">()</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span>    <span class="kd">fun</span> <span class="nf">requestBannerData</span><span class="p">()</span> <span class="p">{</span>
+<span class="linenos" data-linenos="15 "></span>        <span class="c1">// ViewModel扩展函数</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="n">requestDataFromServer</span><span class="p">({</span> <span class="n">apiService</span><span class="p">.</span><span class="na">getHomeBanner</span><span class="p">()</span> <span class="p">},</span> <span class="p">{</span>
+<span class="linenos" data-linenos="17 "></span>            <span class="k">if</span> <span class="p">(</span><span class="nb">it</span><span class="p">.</span><span class="na">isSuccess</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="18 "></span>                <span class="kd">val</span> <span class="nv">resultList</span> <span class="o">=</span> <span class="nb">it</span><span class="p">.</span><span class="na">getOrNull</span><span class="p">()</span>
+<span class="linenos" data-linenos="19 "></span>                <span class="k">if</span> <span class="p">(</span><span class="n">resultList</span> <span class="o">!=</span> <span class="kc">null</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="20 "></span>                    <span class="n">bannerList</span><span class="p">.</span><span class="na">postValue</span><span class="p">(</span><span class="n">resultList</span><span class="p">)</span>
+<span class="linenos" data-linenos="21 "></span>                <span class="p">}</span>
+<span class="linenos" data-linenos="22 "></span>            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="23 "></span>                <span class="n">context</span><span class="p">.</span><span class="na">showToast</span><span class="p">(</span><span class="nb">it</span><span class="p">.</span><span class="na">exceptionOrNull</span><span class="p">()</span><span class="o">?.</span><span class="na">showMessage</span><span class="p">)</span>
+<span class="linenos" data-linenos="24 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="25 "></span>        <span class="p">})</span>
+<span class="linenos" data-linenos="26 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="27 "></span>
+<span class="linenos" data-linenos="28 "></span><span class="p">}</span>
+</code></pre></div>
+<code>Hilt</code>中，也有一个专门的<code>@HiltViewModel</code>注解专门用来注释<code>ViewModel</code>，这样在<code>ViewModel</code>中便能使用注解的方式来获取到相应的依赖对象了。\
+<code>requestDataFromServer</code>函数是对<code>ViewModel</code>进行扩展的一个函数，为了方便进行网络请求的处理。
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="cm">/** 普通从服务器请求数据结果。</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="cm"> * [block] 请求接口挂起函数；该函数会在IO子线程中执行，返回的结果是[BaseBean]子类型</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="cm"> * [result] 请求结果回调函数；</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="cm"> *  */</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="kd">fun</span> <span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">ViewModel</span><span class="p">.</span><span class="nf">requestDataFromServer</span><span class="p">(</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="n">block</span><span class="p">:</span> <span class="n">suspend</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="n">BaseBean</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">,</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="n">result</span><span class="p">:</span> <span class="p">(</span><span class="n">ResponseResult</span><span class="o">&lt;</span><span class="n">T?&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Unit</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="n">viewModelScope</span><span class="p">.</span><span class="na">launch</span> <span class="p">{</span>
+<span class="linenos" data-linenos="10 "></span>        <span class="n">kotlin</span><span class="p">.</span><span class="na">runCatching</span> <span class="p">{</span>
+<span class="linenos" data-linenos="11 "></span>            <span class="n">withContext</span><span class="p">(</span><span class="n">Dispatchers</span><span class="p">.</span><span class="na">IO</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="12 "></span>                <span class="kd">val</span> <span class="nv">blockResult</span> <span class="o">=</span> <span class="n">block</span><span class="p">()</span>
+<span class="linenos" data-linenos="13 "></span>                <span class="k">if</span> <span class="p">(</span><span class="n">blockResult</span><span class="p">.</span><span class="na">errorCode</span> <span class="o">==</span> <span class="m">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="linenos" data-linenos="14 "></span>                    <span class="n">blockResult</span><span class="p">.</span><span class="na">data</span>
+<span class="linenos" data-linenos="15 "></span>                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+<span class="linenos" data-linenos="16 "></span>                    <span class="k">throw</span> <span class="n">ApiException</span><span class="p">(</span><span class="n">blockResult</span><span class="p">.</span><span class="na">errorCode</span><span class="p">,</span> <span class="n">blockResult</span><span class="p">.</span><span class="na">errorMsg</span><span class="p">,</span> <span class="n">blockResult</span><span class="p">.</span><span class="na">errorMsg</span><span class="p">)</span>
+<span class="linenos" data-linenos="17 "></span>                <span class="p">}</span>
+<span class="linenos" data-linenos="18 "></span>            <span class="p">}</span>
+<span class="linenos" data-linenos="19 "></span>        <span class="p">}.</span><span class="na">onSuccess</span> <span class="p">{</span>
+<span class="linenos" data-linenos="20 "></span>            <span class="n">result</span><span class="p">(</span><span class="n">ResponseResult</span><span class="p">.</span><span class="na">success</span><span class="p">(</span><span class="nb">it</span><span class="p">))</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="p">}.</span><span class="na">onFailure</span> <span class="p">{</span>
+<span class="linenos" data-linenos="22 "></span>            <span class="nb">it</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">()</span>
+<span class="linenos" data-linenos="23 "></span>            <span class="n">result</span><span class="p">(</span><span class="n">ResponseResult</span><span class="p">.</span><span class="na">failure</span><span class="p">(</span><span class="nb">it</span><span class="p">))</span>
+<span class="linenos" data-linenos="24 "></span>        <span class="p">}</span>
+<span class="linenos" data-linenos="25 "></span>    <span class="p">}</span>
+<span class="linenos" data-linenos="26 "></span><span class="p">}</span>
+</code></pre></div>
+<code>viewModelScope</code>是<code>ViewModel</code>内置的一个关于协程作用域的成员变量。使用它开启一个协程，进行网络请求的耗时操作。这样我们并不需要关注<code>Activity</code>的生命周期，因为<code>ViewModel</code>与<code>Activity</code>的生命周期是相绑定的，在<code>Activity</code>销毁的时候，<code>ViewModel</code>会做相应的清理工作。这样一个请求就变得非常简单了。</p>
+<p>完整的demo示例地址：https://github.com/sqsong66/JetpackMVVMSample</p>
+<p>示例中还展示了Paging3来进行分页列表数据请求，相比传统的分页列表数据处理显得更加简洁简单。这里不再赘述，感兴趣的小伙伴可以下载demo示例查看。</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../Google%20Play%E8%AE%A2%E9%98%85%E6%8E%A5%E5%85%A5%E6%96%87%E6%A1%A3/" class="md-footer__link md-footer__link--prev" aria-label="上一页: Google Pay" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              Google Pay
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2020 - 2021 WangXu Tech
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.instant", "navigation.top"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.716f8af4.min.js"></script>
+      
+    
+  </body>
+</html>
